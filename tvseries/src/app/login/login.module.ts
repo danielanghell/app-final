@@ -6,7 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { LoginPage } from './login.page';
-import { SharedComponentsModule } from '../tabs/shared-components.module.ts/shared-components.module';
+import { SharedComponentsModule } from '../shared-components/shared-components.module';
 
 const routes: Routes = [
   {
