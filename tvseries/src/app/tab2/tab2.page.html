@@ -7,24 +7,46 @@
 </ion-header>
 
 <ion-content>
-    <ion-card>
-      <img src="assets/images/breakingbad.jpg" width=400px height=250px/>
-      <div class="card-title" >Breaking Bad</div>
-    </ion-card>
-    <ion-card>
-        <img src="assets/images/twd.jpg" width=400px height=250px/>
-        <div class="card-title">The Walking Dead</div>
-      </ion-card>
-    <ion-card>
-      <img src="assets/images/breakingbad.jpg"/>
-      <div class="card-title">Breaking Bad</div>
-    </ion-card>
-    <ion-card>
-      <img src="assets/images/breakingbad.jpg"/>
-      <div class="card-title">Breaking Bad</div>
-    </ion-card>
-    <ion-card>
-        <img src="assets/images/breakingbad.jpg"/>
-        <div class="card-title">Breaking Bad</div>
-    </ion-card>
-</ion-content>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+      </div>
+      <div class="col">
+      <p style="text-align: center;">Newest</p>
+      </div>
+      <div class="col"> 
+      </div>
+    </div>
+  </div>
+
+  <div class="fixed">
+    <ion-list class="list">
+      <app-imgtv></app-imgtv>
+      <app-imgtv></app-imgtv>
+      <app-imgtv></app-imgtv>
+    </ion-list>
+  </div>
+
+  <div class="container">
+      <div class="row">
+        <div class="col">
+        </div>
+        <div class="col">
+        <p>Top Rated</p>
+        </div>
+        <div class="col"> 
+        </div>
+      </div>
+    </div>
+
+    <div class="fixed">
+        <ion-list>
+          <app-imgtv></app-imgtv>
+          <app-imgtv></app-imgtv>
+          <app-imgtv></app-imgtv>
+        </ion-list>
+      </div>
+
+     
+ </ion-content>
