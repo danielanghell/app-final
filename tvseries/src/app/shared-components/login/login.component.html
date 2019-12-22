@@ -32,7 +32,15 @@
 
     </div>
 
-    <button class="btn btn-primary" type="submit">Login</button>
+    <button (click)="onClick()" class="btn btn-primary" type="submit">Login</button>
+
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox">
+      <label class="form-check-label">Keep me logged in</label>
+
+      <button class="btn btn-primary" type="submit">Register</button>
+
+    </div>
   </form>
-  {{registrationForm.value | json}}
+
 </div>

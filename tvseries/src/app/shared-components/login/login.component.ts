@@ -37,7 +37,9 @@ export class LoginComponent implements OnInit {
 
   }
 
-
+  onClick($event) {
+    console.log(this.registrationForm.value);
+  }
 
 }
 
