@@ -1,9 +1,12 @@
 <div class="container-fluid">
   <h2>Login</h2>
-  <form>
+  <form [formGroup]="registrationForm">
     <div class="form-group">
       <label>Username</label>
-      <input formControlName="userName" type="text" class="form-control">
+      <input [class.is-invalid]="registrationForm.get('userName').invalid && registrationForm.get('userName').touched"
+        formControlName="userName" type="text" class="form-control">
+      <small [class.d-none]="registrationForm.get('userName').valid || registrationForm.get('userName').untouched"
+        class="text-danger">Username is required</small>
     </div>
 
     <div class="form-group">
@@ -13,5 +16,5 @@
 
     <button class="btn btn-primary" type="submit">Login</button>
   </form>
-  {{registrationForm.values | json}}
+  {{registrationForm.value | json}}
 </div>
