@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { atSignValidator } from '../shared-functions/atsign.validator';
 
 
 @Component({
@@ -9,11 +10,19 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
+  get userName() {
+    return this.registrationForm.get('userName');
+  }
+
+  get password() {
+    return this.registrationForm.get('password');
+  }
+
   constructor(private fb: FormBuilder) { }
 
   registrationForm = this.fb.group({
-    userName: ['', Validators.required],
-    password: ['']
+    userName: ['', [Validators.required, Validators.minLength(3)]],
+    password: ['', [Validators.required, Validators.minLength(8)]]
   });
 
   // registrationForm = new FormGroup({
@@ -27,6 +36,8 @@ export class LoginComponent implements OnInit {
 
 
   }
+
+
 
 }
 
