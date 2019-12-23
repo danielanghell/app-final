@@ -1,6 +1,7 @@
 <div class="container-fluid">
   <h2>Login</h2>
   <form [formGroup]="registrationForm">
+
     <div class="form-group">
       <label>Username</label>
       <input [class.is-invalid]="userName.invalid && userName.touched" formControlName="userName" type="text"
@@ -32,13 +33,19 @@
 
     </div>
 
-    <button (click)="onClick()" class="btn btn-primary" type="submit">Login</button>
+    <button (click)="onClick()" [disabled]="userName.invalid || password.invalid" class="btn btn-primary"
+      type="submit">Login</button>
 
     <div class="form-check">
       <input class="form-check-input" type="checkbox">
       <label class="form-check-label">Keep me logged in</label>
+      <div>
+        <a href='http://localhost:8100/register' (click)="onSelect">Haven't got an account yet?</a>
 
-      <button class="btn btn-primary" type="submit">Register</button>
+      </div>
+
+
+
 
     </div>
   </form>

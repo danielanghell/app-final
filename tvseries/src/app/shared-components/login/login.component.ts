@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { atSignValidator } from '../shared-functions/atsign.validator';
 
 
@@ -18,7 +19,7 @@ export class LoginComponent implements OnInit {
     return this.registrationForm.get('password');
   }
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private router: Router) { }
 
   registrationForm = this.fb.group({
     userName: ['', [Validators.required, Validators.minLength(3)]],
@@ -41,6 +42,9 @@ export class LoginComponent implements OnInit {
     console.log(this.registrationForm.value);
   }
 
+  onSelect($event) {
+    this.router.navigate(['register']);
+  }
 }
 
 

@@ -8,14 +8,18 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { from } from 'rxjs';
-import { CommonModule } from '@angular/common';
+
+import { SharedComponentsModule } from './shared-components/shared-components.module';
+
+
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
+
   imports: [BrowserModule,
     IonicModule.forRoot(),
+    SharedComponentsModule,
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule],
