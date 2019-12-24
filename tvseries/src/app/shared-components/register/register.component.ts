@@ -17,14 +17,22 @@ export class RegisterComponent implements OnInit {
     return this.registrationForm.get('password');
   }
 
+  get address() {
+    return this.registrationForm.get('address');
+  }
+
+  get phone() {
+    return this.registrationForm.get('phone');
+  }
+
 
   constructor(private fb: FormBuilder, private router: Router) { }
 
   registrationForm = this.fb.group({
     userName: ['', [Validators.required, Validators.minLength(3)]],
     password: ['', [Validators.required, Validators.minLength(8)]],
-    address: [''],
-    phone: ['']
+    address: ['', Validators.required],
+    phone: ['', Validators.required]
   });
 
 
