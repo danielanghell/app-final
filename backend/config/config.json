@@ -1,0 +1,12 @@
+{
+    "development": {
+        "PORT": 3000,
+        "MongoDB_URI": "mongodb+srv://cocolino:cocolino@app-2ascn.mongodb.net/test?retryWrites=true&w=majority",
+        "JWT_SECRET": "SECRET#123",
+        "JWT_EXP": "2m"
+    },
+    "production": {
+        "PORT": 80,
+        "MongoDB_URI": "mongodb://xxxx/DBx"
+    }
+}
