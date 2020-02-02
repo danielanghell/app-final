@@ -2,7 +2,7 @@ import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { LoginComponent } from './login/login.component';
 import { ImgtvComponent } from './imgtv/imgtv.component';
-import { RegisterComponent } from './register/register.component';
+import { RegisterComponent } from './user/register/register.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { UserComponent } from './user/user.component';

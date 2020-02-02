@@ -28,12 +28,12 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'tab1',
+        path: 'tab3',
         children: [
           {
             path: '',
             loadChildren: () =>
-              import('../tab1/tab1.module').then(m => m.Tab1PageModule)
+              import('../tab3/tab3.module').then(m => m.Tab3PageModule)
           }
         ]
       },
