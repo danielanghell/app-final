@@ -8,7 +8,9 @@ const routes: Routes = [
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
   { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
-  { path: 'register', component: RegisterComponent }
+  { path: 'register', component: RegisterComponent },
+  { path: 'movies/:id', loadChildren: './movie-details/movie-details.module#MovieDetailsPageModule' }
+
 
 ];
 @NgModule({

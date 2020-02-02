@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar color=primary>
+    <ion-title>Details about movie</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngIf="information">
+    <ion-card-header>
+      <ion-card-title>
+        {{ information.Title }}
+      </ion-card-title>
+      <ion-card-subtitle>
+        {{ information.Year }}
+      </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <img [src]="information.Poster" class="pic">
+      <p>{{ information.Plot }}</p>
+    </ion-card-content>
+  </ion-card>
+  <ion-back-button defaultHref="/"></ion-back-button>
+
+</ion-content>

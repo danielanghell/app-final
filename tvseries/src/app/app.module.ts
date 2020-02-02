@@ -10,8 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { SharedComponentsModule } from './shared-components/shared-components.module';
-
-
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,7 +21,8 @@ import { SharedComponentsModule } from './shared-components/shared-components.mo
     SharedComponentsModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule],
+    FormsModule,
+    HttpClientModule],
 
   providers: [
     StatusBar,

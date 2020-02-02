@@ -7,46 +7,20 @@
 </ion-header>
 
 <ion-content>
+  <ion-searchbar placeholder="Enter a keyword" [(ngModel)]="searchTerm" (ionChange)="searchChanged($event)">
+  </ion-searchbar>
 
-  <div class="container">
-    <div class="row">
-      <div class="col">
-      </div>
-      <div class="col">
-      <p style="text-align: center;">Newest</p>
-      </div>
-      <div class="col"> 
-      </div>
-    </div>
-  </div>
+  <ion-list>
+    <ion-item button *ngFor="let item of (result | async)" [routerLink]="['/' , 'movies' , item.imdbID]">
+      <ion-avatar slot="start">
+        <img [src]="item.Poster" *ngIf="item.Poster != 'N/A'">
+      </ion-avatar>
 
-  <div class="fixed">
-    <ion-list class="list">
-      <app-imgtv></app-imgtv>
-      <app-imgtv></app-imgtv>
-      <app-imgtv></app-imgtv>
-    </ion-list>
-  </div>
+      <ion-label text-wrap>
+        <h3>{{ item.Title }}</h3>
+        {{ item.Year }}
+      </ion-label>
+    </ion-item>
+  </ion-list>
 
-  <div class="container">
-      <div class="row">
-        <div class="col">
-        </div>
-        <div class="col">
-        <p>Top Rated</p>
-        </div>
-        <div class="col"> 
-        </div>
-      </div>
-    </div>
-
-    <div class="fixed">
-        <ion-list>
-          <app-imgtv></app-imgtv>
-          <app-imgtv></app-imgtv>
-          <app-imgtv></app-imgtv>
-        </ion-list>
-      </div>
-
-     
- </ion-content>
+</ion-content>
