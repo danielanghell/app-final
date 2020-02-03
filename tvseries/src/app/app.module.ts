@@ -17,6 +17,8 @@ import { SharedComponentsModule } from './shared-components/shared-components.mo
 import { appRoutes } from './routes';
 import { UserService } from './shared/user.service';
 
+import { AuthGuard } from './auth/auth.guard';
+
 
 
 
@@ -37,6 +39,7 @@ import { UserService } from './shared/user.service';
   providers: [
     StatusBar,
     UserService,
+    AuthGuard,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
