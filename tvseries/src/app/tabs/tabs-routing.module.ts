@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TabsPage } from './tabs.page';
+import { UserProfileComponent } from '../user-profile/user-profile.component';
+import { AuthGuard } from '../auth/auth.guard';
 
 const routes: Routes = [
   {
@@ -8,14 +10,7 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'login',
-        children: [
-          {
-            path: '',
-            loadChildren: () =>
-              import('../login/login.module').then(m => m.LoginPageModule)
-          }
-        ]
+        path: 'userprofile', component: UserProfileComponent, canActivate: [AuthGuard]
       },
       {
         path: 'tab2',
@@ -39,7 +34,7 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: '/tabs/login',
+        redirectTo: '/tabs/userprofile',
         pathMatch: 'full'
       }
     ]

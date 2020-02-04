@@ -28,6 +28,10 @@
 <div class="success" *ngIf="showSuccessMessage">
   Your registration has been completed
 </div>
+<div>
+  <a href='http://localhost:8100/login' (click)="onSelect">Sign in</a>
+
+</div>
 
 
 <div class="alert" *ngIf="serverErrorMessages">

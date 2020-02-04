@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { UserService } from '../../../shared/user.service';
 import { Router } from '@angular/router';
+import { TabsPageModule } from '../../../tabs/tabs.module';
 
 
 @Component({
@@ -28,7 +29,7 @@ export class SignInComponent implements OnInit {
     this.userService.login(form.value).subscribe(
       res => {
         this.userService.setToken(res['token']);
-        this.router.navigateByUrl('/userprofile');
+        this.router.navigateByUrl('/tabs/userprofile');
 
       },
       err => {
