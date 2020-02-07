@@ -37,16 +37,12 @@ import { AuthInterceptor } from './auth/auth.interceptor';
     ReactiveFormsModule,
     FormsModule],
 
-  providers: [{
-    provide: HTTP_INTERCEPTORS,
-    useClass: AuthInterceptor,
-    multi: true
-  },
+  providers: [
     StatusBar,
     UserService,
     AuthGuard,
     SplashScreen,
-  { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
 
   bootstrap: [AppComponent]

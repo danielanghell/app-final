@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+import { MovieService } from '../services/movie.service';
 
 @Component({
   selector: 'app-tab3',
@@ -7,6 +9,17 @@ import { Component } from '@angular/core';
 })
 export class Tab3Page {
 
-  constructor() {}
+  result: Observable<any>;
+  searchTerm: string = '';
+
+  constructor(private movieService: MovieService) { }
+
+  ngOnInit() {
+
+  }
+
+  searchChanged() {
+    this.result = this.movieService.searchData(this.searchTerm);
+  }
 
 }

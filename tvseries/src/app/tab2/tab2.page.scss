@@ -15,6 +15,19 @@
     overflow-y: auto;
   }
 
-.container{
-  padding:8px;
+.tag{
+
+    border-radius: 25px;
+    background: #f35c5c ;
+    border: 2px solid rgb(255, 255, 255);
+    color: #ffffff;
+    margin: auto;
+    padding: 6px;
+    width: 120px;
+    height: 35px;
+    text-align: center;
+  }
+
+.row{
+  padding: 4px;
 }

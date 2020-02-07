@@ -11,7 +11,7 @@
   </ion-searchbar>
 
   <ion-list>
-    <ion-item button *ngFor="let item of (result | async)" [routerLink]="['/' , 'movies' , item.imdbID]">
+    <ion-item button *ngFor="let item of (result | async)" [routerLink]="['/' , 'series' , item.imdbID]">
       <ion-avatar slot="start">
         <img [src]="item.Poster" *ngIf="item.Poster != 'N/A'">
       </ion-avatar>
@@ -22,5 +22,46 @@
       </ion-label>
     </ion-item>
   </ion-list>
+  <h5 class="tag">Top Rated</h5>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <img src={{topRated[0]}} width=230px height=150px />
+      </div>
+      <div class="col">
+        <img src={{topRated[1]}} width=230px height=150px />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <img src={{topRated[2]}} width=230px height=150px />
+      </div>
+      <div class="col">
+        <img src={{topRated[3]}} width=230px height=150px />
+      </div>
+    </div>
+  </div>
+
+
+  <h5 class="tag">Top Rated</h5>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <img src={{topRated[0]}} width=230px height=150px />
+      </div>
+      <div class="col">
+        <img src={{topRated[1]}} width=230px height=150px />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <img src={{topRated[2]}} width=230px height=150px />
+      </div>
+      <div class="col">
+        <img src={{topRated[3]}} width=230px height=150px />
+      </div>
+    </div>
+  </div>
+
 
 </ion-content>

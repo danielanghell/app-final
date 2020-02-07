@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
-import { MovieService } from '../services/movie.service';
+import { SeriesService } from '../services/series.service';
 
 @Component({
   selector: 'app-tab2',
@@ -9,16 +9,23 @@ import { MovieService } from '../services/movie.service';
 })
 export class Tab2Page {
 
+  public topRated = [
+    "assets/images/twd.jpg",
+    "assets/images/sop.jpg",
+    "assets/images/breakingbad.jpg",
+    "assets/images/cbl.jpg"
+  ];
+
   result: Observable<any>;
   searchTerm: string = '';
 
-  constructor(private movieService: MovieService) { }
+  constructor(private seriesService: SeriesService) { }
 
   ngOnInit() {
 
   }
 
   searchChanged() {
-    this.result = this.movieService.searchData(this.searchTerm);
+    this.result = this.seriesService.searchData(this.searchTerm);
   }
 }

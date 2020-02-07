@@ -7,14 +7,14 @@ import { map } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
-export class MovieService {
+export class SeriesService {
   url = 'http://www.omdbapi.com/';
   apiKey = '27223cda';
 
   constructor(private http: HttpClient) { }
 
   searchData(title: string): Observable<any> {
-    return this.http.get(`${this.url}?s=${encodeURI(title)}&type=movie&apikey=${this.apiKey}`).pipe(
+    return this.http.get(`${this.url}?s=${encodeURI(title)}&type=series&apikey=${this.apiKey}`).pipe(
       map(results => {
         console.log('RAW', results);
         return results['Search'];

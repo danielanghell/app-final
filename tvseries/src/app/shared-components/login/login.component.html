@@ -27,10 +27,6 @@
           characters</small>
 
       </div>
-
-
-
-
     </div>
 
     <button (click)="onClick()" [disabled]="userName.invalid || password.invalid" class="btn btn-primary"
@@ -39,13 +35,8 @@
     <div class="form-check">
       <input class="form-check-input" type="checkbox">
       <label class="form-check-label">Keep me logged in</label>
-      <div>
-        <a href='http://localhost:8100/register' (click)="onSelect">Haven't got an account yet?</a>
 
-      </div>
-
-
-
+      <a href='http://localhost:8100/register' (click)="onSelect">Haven't got an account yet?</a>
 
     </div>
   </form>

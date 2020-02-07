@@ -7,5 +7,20 @@
 </ion-header>
 
 <ion-content>
-  <p>muie</p>
+  <ion-searchbar placeholder="Enter a keyword" [(ngModel)]="searchTerm" (ionChange)="searchChanged($event)">
+  </ion-searchbar>
+
+  <ion-list>
+    <ion-item button *ngFor="let item of (result | async)" [routerLink]="['/' , 'movies' , item.imdbID]">
+      <ion-avatar slot="start">
+        <img [src]="item.Poster" *ngIf="item.Poster != 'N/A'">
+      </ion-avatar>
+
+      <ion-label text-wrap>
+        <h3>{{ item.Title }}</h3>
+        {{ item.Year }}
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
 </ion-content>
