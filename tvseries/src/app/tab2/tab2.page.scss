@@ -1,19 +1,4 @@
-.fixed[scrollx=true], div[scrolly=hidden] {
-    position: relative;
-    overflow: hidden;
-  
-    ::-webkit-scrollbar {
-      display: none;
-    }
-  }
-  
-  .fixed[scrollx=true] {
-    overflow-x: auto;
-  }
-  
-  .fixed[scrolly=hidden] {
-    overflow-y: auto;
-  }
+
 
 .tag{
 
@@ -27,7 +12,18 @@
     height: 35px;
     text-align: center;
   }
+  #tag2{
 
+    border-radius: 25px;
+    background: #f35c5c ;
+    border: 2px solid rgb(255, 255, 255);
+    color: #ffffff;
+    margin: auto;
+    padding: 6px;
+    width: 140px;
+    height: 35px;
+    text-align: center;
+  }
 .row{
   padding: 4px;
 }
@@ -38,6 +34,12 @@
   height: 200px;
   margin-left: auto;
   margin-right: auto;
-  width: 70%;
+  width: 60%;
   padding-top: 10px;
+}
+
+.tvcard{
+  width: 300px !important;
+  width: 80%;
+  margin: auto;
 }

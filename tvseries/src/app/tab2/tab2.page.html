@@ -33,4 +33,13 @@
     </ion-card>
   </div>
 
+  <h5 id="tag2" >Most Popular</h5>
+  <div *ngFor="let popular of mostPopular">
+    <ion-card class="tvcard" href="{{popular.link}}">
+      <img class="pic" src={{popular.img}} />
+      <ion-card-header>
+        <ion-card-title style="text-align:center">{{popular.title}}</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+  </div>
 </ion-content>

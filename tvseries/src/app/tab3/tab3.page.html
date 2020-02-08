@@ -23,4 +23,24 @@
     </ion-item>
   </ion-list>
 
+  <h5 class="tag">Top Rated</h5>
+  <div *ngFor="let rated of topRated">
+    <ion-card class="tvcard" href="{{rated.link}}">
+      <img class="pic" src={{rated.img}} />
+      <ion-card-header>
+        <ion-card-title style="text-align:center">{{rated.title}}</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+  </div>
+
+  <h5 id="tag2" >Most Popular</h5>
+  <div *ngFor="let popular of mostPopular">
+    <ion-card class="tvcard" href="{{popular.link}}">
+      <img class="pic" src={{popular.img}} />
+      <ion-card-header>
+        <ion-card-title style="text-align:center">{{popular.title}}</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+  </div>
+
 </ion-content>

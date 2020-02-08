@@ -9,53 +9,51 @@ import { SeriesService } from '../services/series.service';
 })
 export class Tab2Page {
 
-  public topRatedImg = [
-    "assets/images/twd.jpg",
-    "assets/images/sop.jpg",
-    "assets/images/breakingbad.jpg",
-    "assets/images/cbl.jpg"
-  ];
-
-  public topRatedTitle = [
-    "TWD",
-    "Sophranos",
-    "Br",
-    "CH"
-  ];
-
-  public topRatedLink = [
-    "http://localhost:8100/series/tt1520211",
-    "http://localhost:8100/series/tt1520211",
-    "http://localhost:8100/series/tt1520211",
-    "http://localhost:8100/series/tt1520211"
-  ];
-
-
   series = [
     {
-      title: "TWD",
-      img: "assets/images/twd.jpg",
-      link: "http://localhost:8100/series/tt1520211",
+      title: "Sherlock",
+      img: "assets/images/sher.jpg",
+      link: "http://localhost:8100/series/tt1475582",
     },
     {
-      title: "bc",
-      img: "assets/images/twd.jpg",
-      link: "http://localhost:8100/series/tt1520211",
+      title: "Breaking Bad",
+      img: "assets/images/breakingbad.jpg",
+      link: "http://localhost:8100/series/tt0903747",
     },
     {
-      title: "df",
-      img: "assets/images/twd.jpg",
-      link: "http://localhost:8100/series/tt1520211",
+      title: "The Sopranos",
+      img: "assets/images/sop.jpg",
+      link: "http://localhost:8100/series/tt0141842",
     },
     {
-      title: "asf",
-      img: "assets/images/twd.jpg",
-      link: "http://localhost:8100/series/tt1520211",
+      title: "Band Of Brothers",
+      img: "assets/images/bob.jpg",
+      link: "http://localhost:8100/series/tt0185906",
     },
-
 
   ]
-
+ mostPopular = [
+  {
+    title: "Arrow",
+    img: "assets/images/arrow.jpg",
+    link: "http://localhost:8100/series/tt2193021",
+  },
+  {
+    title: "The Office",
+    img: "assets/images/office.jpg",
+    link: "http://localhost:8100/series/tt0386676",
+  },
+  {
+    title: "Game of Thrones",
+    img: "assets/images/got.jpg",
+    link: "http://localhost:8100/series/tt0944947",
+  },
+  {
+    title: "The Walking Dead",
+    img: "assets/images/twd.jpg",
+    link: "http://localhost:8100/series/tt1520211",
+  },
+ ]
 
   result: Observable<any>;
   searchTerm: string = '';
