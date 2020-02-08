@@ -38,6 +38,13 @@ import { AuthInterceptor } from './auth/auth.interceptor';
     FormsModule],
 
   providers: [
+    /*
+      {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    },
+    */
     StatusBar,
     UserService,
     AuthGuard,

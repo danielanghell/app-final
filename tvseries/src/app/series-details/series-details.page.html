@@ -17,6 +17,11 @@
     <ion-card-content>
       <img [src]="information.Poster" class="pic">
       <p>{{ information.Plot }}</p>
+      <br>
+      <h1>Awards:</h1>
+      <p>{{ information.Awards }}</p>
+      <br>
+      <p>{{ "IMDB Rating:"+information.imdbRating }}</p>
     </ion-card-content>
   </ion-card>
   <ion-back-button defaultHref="/"></ion-back-button>
