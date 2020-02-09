@@ -19,6 +19,18 @@
       <p>{{ information.Plot }}</p>
     </ion-card-content>
   </ion-card>
-  <ion-back-button defaultHref="/"></ion-back-button>
+  <ion-list class="lst" lines="none" *ngIf="information">
+    <ion-item>
+      <ion-icon slot="start" color="medium" name="star"></ion-icon>
+      <ion-label>{{information.imdbRating}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon slot="start" color="medium" name="trophy"></ion-icon>
+      <p>{{information.Awards}}</p>
+    </ion-item>
+  </ion-list>
+
+  <ion-back-button id="btn1" defaultHref="/tabs/tab3" text="BACK">
+  </ion-back-button>
 
 </ion-content>
